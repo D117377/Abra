@@ -1,0 +1,8 @@
+pyperclip
+pyautogui
+pynput
+pystray
+Pillow
+pyspellchecker
+requests
+pyinstaller
