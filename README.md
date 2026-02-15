@@ -1,4 +1,4 @@
-# ABRA — Умный переключатель раскладки
+#  ABRA — Умный переключатель раскладки
 
 ![Abra Icon](main_icon.ico)
 
@@ -16,7 +16,7 @@
 
 ## 📥 Установка для пользователей
 
-1. Перейдите в раздел [Releases](ссылка-на-твои-релизы-на-гитхабе) (справа).
+1. Перейдите в раздел [Releases](https://github.com/D117377/Abra/releases) (справа).
 2. Скачайте архив `Abra.zip`.
 3. Распакуйте в удобную папку.
 4. Запустите `Abra.exe`.
@@ -43,19 +43,27 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone [https://github.com/ВАШ_НИК/Abra.git](https://github.com/ВАШ_НИК/Abra.git)
+   git clone https://github.com/D117377/Abra.git
    cd Abra
+   ```
 
 2. **Установите зависимости:**
+   ```bash
    pip install -r requirements.txt
+   ```
 
 3. **Запустите:**
-   python smart_layout_v21_final.pyw
+   ```bash
+   python abra.pyw
+   ```
 
 4. **Сборка в .exe:**
-    pyinstaller --noconsole --onefile --clean --icon=main_icon.ico --name=Abra --collect-all spellchecker smart_layout_v21_final.pyw
+   ```bash
+   pyinstaller --noconsole --onefile --clean --icon=main_icon.ico --name=Abra --collect-all spellchecker abra.pyw
+   ```
 
 ## 🤝 Поддержка автора
 
 Этот проект разрабатывается в свободное время. Если Abra сэкономила вам нервы и время, вы можете угостить автора кофе ☕:
-https://pay.cloudtips.ru/p/dfa5bb67
+
+[Поддержать через CloudTips](https://pay.cloudtips.ru/p/dfa5bb67)
