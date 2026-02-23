@@ -1,0 +1,17 @@
+# Папки сборки и виртуальное окружение
+.venv/
+build/
+dist/
+__pycache__/
+
+# Личные файлы и логи
+abra_log.txt
+settings.json
+my_terms.txt
+
+# Файлы сборщика
+*.spec
+
+# Папки с архивами
+old/
+icons/
