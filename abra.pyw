@@ -16,13 +16,13 @@ import pystray
 from PIL import Image
 from pynput import keyboard as pk
 
-# --- ЖЕЛЕЗНЫЕ ПУТИ (FIX ДЛЯ .EXE) ---
-# Эта магия позволяет понять: мы запущены как скрипт или как собранный EXE?
+# --- FIX ДЛЯ .EXE ---
+# мы запущены как скрипт или как собранный EXE?
 if getattr(sys, 'frozen', False):
     # Если это EXE, берем папку, где лежит сам файл .exe
     SCRIPT_DIR = os.path.dirname(sys.executable)
 else:
-    # Если это скрипт, берем папку скрипта
+    # Если скрипт - папку скрипта
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def get_path(filename):
@@ -71,7 +71,7 @@ class AbraApp:
         self.config = {}
         self.last_sync_time = 0
         
-        # Печатаем путь старта, чтобы ты видел, откуда работает
+        # Печатаем путь старта, чтобы было видно, откуда работает
         print(f"--- РАБОЧАЯ ПАПКА: {SCRIPT_DIR} ---")
         
         self.load_settings()
@@ -204,7 +204,7 @@ class AbraApp:
         return text
 
     def show_notification(self, title, message):
-        # Простой и надежный метод уведомлений
+        # метод уведомлений
         if self.config.get("show_tooltip", True) and self.tray_icon:
             try:
                 self.tray_icon.notify(message, title)
@@ -254,7 +254,7 @@ class AbraApp:
 
     # --- GUI И ТРЕЙ ---
     def setup_tray(self):
-        # Простая загрузка иконки
+        # загрузка иконки
         img = Image.open(ICON_FILE) if os.path.exists(ICON_FILE) else Image.new('RGB', (64, 64), (0, 120, 215))
         
         menu = pystray.Menu(
